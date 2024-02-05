@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>SIGHAN 2024 Shared Task</title>
+
+    
+    <!-- 匯入bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  
+    <!-- 匯入jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+    <!-- 插入方程式 -->
+    <script async src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script async id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <link rel="stylesheet" href="main.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+
+<!-- ============================================================================ -->
+
+
+    <div>
+        <nav class="nav navbar-default navbar-fixed-top topflex" id="topdiv">
+
+            <div class="navbar-header" id="navheader">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#collapsingNavbarMd">
+                    <span class="sr-only"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+
+            <div class="collapse navbar-collapse navbar-collapse-center" id="collapsingNavbarMd">
+                <ul class="nav navbar-nav navbar-center" >
+
+                    <li class="single"><a href="javascript:;" class="navItems" navTo="#call_paper">Introduction</a></li>
+
+                    <li class="single"><a href="javascript:;" class="navItems" navTo="#programs">Task Description</a></li>
+
+                    <li class="single"><a href="javascript:;" class="navItems" navTo="#registration">Data Sets</a></li>
+
+                    <li class="single"><a href="javascript:;" class="navItems" navTo="#key_note">Evaluation</a></li>
+
+                    <li class="single"><a href="javascript:;" class="navItems" navTo="#tutor">System Description Paper</a></li>
+                    
+                    <li class="single"><a href="javascript:;" class="navItems" navTo="#special">Important Dates</a></li>
+
+                    <li class="single"><a href="javascript:;" class="navItems" navTo="#task">References</a></li>
+
+                </ul>
+            </div>
+        </nav>
+    </div>
+   
+
+    <!-- ============================================================================ -->
+
+    <div class="welcome">
+        <div class="wrap">
+            <div class="item text">
+                <h1>SIGHAN 2024 Shared Task for Chinese Dimensional Aspect-Based Sentiment Analysis (dimABSA)</h1>
+                <div class="content">
+                    <p ><strong>Organizers</strong></p>
+                    <p><strong>Lung-Hao Lee (National Yang Ming Chiao Tung University), Liang-Chih Yu (Yuan Ze University),</strong></p>      
+                    <p><strong>Suge Wang (Shanxi University), Jian Liao (Shanxi University)</strong></p>                    
+                </div>
+            </div>
+        </div>    
+    </div>
+
+    <!-- ============================================================================ -->
+
+    <div class="paper" id="call_paper">
+
+        <h1>Introduction</h1>
+        
+        <div class="introduce_div_before">
+            <div class="introduce_div">
+                <p>Aspect-Based Sentiment Analysis (ABSA) (Pontiki et al., 2014; 2015; 2016) is a critical NLP research topic that aims to identify the aspects of a given entity and analyzing the sentiment polarity associated with each aspect. In recent years, numerous research effects have been made on ABSA, which can be categorized into different tasks based on the number of sentimental elements to be extracted. For example, Aspect Sentiment Triplet Extraction (ASTE) (Chen et al., 2021; Mao et al., 2021; Peng et al., 2020; Wu et al., 2020; Xu et al., 2020; Zhang et al., 2020) task extracts three elements in a triplet, including aspect/target term, opinion term and sentiment polarity (e.g., positive, neutral, and negative). Furthermore, Aspect Sentiment Quadruple Prediction (ASQP) (Cai et al., 2021; Gao et al., 2022; Mao et al., 2022; Peper & Wang, 2022; Zhang et al., 2021; Zhou et al., 2023) task extracts the same three elements plus an additional aspect category to construct a quadruple. However, compared to representing affective states as several discrete classes (i.e., polarity), the dimensional approach that represents affective states as continuous numerical values (called intensity) in multiple dimensions such as valence-arousal (VA) space (Russel, 1980), providing more fine-grained emotional information (Lee et al., 2022). 
+                </p>
+                <p>Therefore, we organize a Chinese dimensional ABSA shared task (dimABSA) in the SIGHAN 2024 workshop, providing fine-grained sentiment intensity prediction for each extracted aspect of a restaurant review. The four sentiment elements are defined as follows:</p>
+            </div>
+        </div>
+        <div class="table_div_mid">
+            <ul style="text-align:left">
+                <li><strong>Aspect Term (shorted as A): </strong>This denotes an entity indicating the opinion target. If the aspect is omitted without being mentioned clearly, we use “NULL” to represent the term.</li>
+                <li><strong>Aspect Category (C): </strong>This represents a predefined category for the explicit aspect of the restaurant domain. We use the same categories defined in the SemEval-2016 Restaurant dataset (Pontiki et al., 2016). There are a total of twelve categories; each can be split into an entity and attribute using the symbol “#.” We describe them as follows: “餐廳#概括” (餐厅#概括, restaurant#general), “餐廳#價格”(餐厅#价格, restaurant#prices), “餐廳#雜項” (餐厅#杂项, restaurant#miscellaneous),“食物#價格” (食物#价格, food#prices), “食物#品質” (食物#品质, food#quality), “食物#份量與款式”(食物#份量与款式, food#style&options), “飲料#價格” (饮料#价格, drinks#prices), “飲料#品質”(饮料#品质, drinks#quality), “飲料#份量與款式”(饮料#份量与款式, drinks#style&options), “氛圍#概括”(氛围#概括, ambience#general), “服務#概括” (服务#概括, services#general) and “地點#概括” (地点#概括, location#general). </li>
+                <li><strong>Opinion Term (O): </strong>This describes the sentiment words or phrases towards the aspects.</li>
+                <li><strong>Sentiment Intensity (I): </strong>This reflects respective sentiments using continuous real-valued scores in the valence-arousal dimensions. The valence represents the degree of pleasant and unpleasant (i.e., positive and negative) feelings, while the arousal represents the degree of excitement and calm. Both the valence and arousal dimensions use a nine-degree scale. Value 1 on the valence and arousal dimensions denotes extremely high-negative and low-arousal sentiment, respectively. In contrast, 9 denotes extremely high-positive and high-arousal sentiment, and 5 denotes a neutral and medium-arousal sentiment. Valence-arousal values are separated by a hashtag (symbol “#”) for a mark.</li>
+            </ul>
+        </div>
+    </div>
+    
+    <!-- ============================================================================ -->
+
+    <div class='programs' id='programs'>
+        <h1>Task Description</h1>
+        <div class="introduce_div_before">
+            <div class="introduce_div">
+                <p>This task aims to evaluate the capability of an automatic system for Chinese dimensional ABSA. This task can be further divided into three subtasks described as follows. 
+                </p>
+                <h2>Subtask 1: Intensity Prediction</h2>
+                <p>The first subtask focuses on predicting sentiment intensities in the valence-arousal dimensions. Given a sentence and a specific aspect, the system should predict the valence-arousal ratings. The input format consists of ID, sentence, and aspect. The output is two real-valued scores rounded to two decimal places and separated by a hashtag, each denotes the valence and arousal rating, respectively.</p>
+                <div class="part">
+                    <h3>Example 1</h3>
+                    <p>(Traditional Chinese version)</p>
+                    <p>Input: E0001:S001, 這個湯頭濃重了一些, 湯頭</p>
+                    <p>Output: 4.50#3.25</p>
+                    <p></p>
+                    <p>(Simplified Chinese version)</p>
+                    <p>Input: E0001:S001, 这个汤头浓重了一些, 汤头</p>
+                    <p>Output: 4.50#3.25</p>
+                    <p></p>
+                </div>
+                
+                <h2>Subtask 2: Triplet Extraction</h2>
+                <p>The second subtask aims to extract sentiment triplets composed of three elements. Given a sentence only, the system should extract at least one sentiment triplet (aspect, opinion, intensity). </p>
+                <div class="part">
+                    <h3>Example 2</h3>
+                    <p>(Traditional Chinese version)</p>
+                    <p>Input: E0002:S002, 不僅餐點美味上菜速度也是飛快耶！！</p>
+                    <p>Output: (餐點, 美味, 6.63#4.63) (上菜速度, 飛快, 7.25#6.00)</p>
+                    <p></p>
+                    <p>(Simplified Chinese version)</p>
+                    <p>Input: E0002:S002, 不僅餐點美味上菜速度也是飛快耶！！</p>
+                    <p>Output: (餐點, 美味, 6.63#4.63) (上菜速度, 飛快, 7.25#6.00)</p>
+                    <p></p>
+                </div>
+                
+                <h2>Subtask 3: Quadruple Extraction</h2>
+                <p>The third subtask aims to extract sentiment quadruples composed of four elements. Given a sentence only, the system should extract at least one sentiment quadruple (aspect, category, opinion, intensity). </p>
+                <div class="part">
+                    <h3>Example 3</h3>
+                    <p>(Traditional Chinese version)</p>
+                    <p>Input: E0003:S003, 這碗拉麵超級無敵霹靂難吃</p>
+                    <p>Output: (拉麵, 食物#品質, 超級無敵霹靂難吃, 2.00#7.88)</p>
+                    <p></p>
+                    <p>(Simplified Chinese version)</p>
+                    <p>Input: E0003:S003, 這碗拉麵超級無敵霹靂難吃</p>
+                    <p>Output: (拉麵, 食物#品質, 超級無敵霹靂難吃, 2.00#7.88)</p>
+                </div>
+            </div>  
+        </div>
+    </div>
+
+
+    <!-- ============================================================================ -->
+
+    <div class="registration" id="registration">
+        <h1>Data Sets</h1>
+        <div class="introduce_div_before">
+            <div class="introduce_div">
+                <p>We first crawled reviews from a popular online social media platform. Then, we removed all HTML tags and multimedia material and split the remaining texts into several sentences. Finally, we randomly selected partial sentences to retain content diversity for manual annotation.</p>
+                <p>Three graduate students majoring in engineering were trained to manually annotate aspect terms, aspect categories, and opinion terms. All annotators were asked to discuss differences and seek consensus. The valence-arousal annotation was then accomplished by nine undergraduate students majoring in Chinese Language. Each instance is randomly assigned to five annotators for rating. Once the annotation process was finished, a cleanup procedure was performed to remove outlier ratings. Outliers were identified if they did not fall into the mean plus/minus 1.5 standard deviations (SD) interval. They were then excluded from calculating the average VA ratings for each instance. </p>
+                <div class="part">
+                    <h3>Notes</h3>
+                    <p>1.&nbsp;&nbsp;The policy of this shared task is an open test. Participating systems can use other publicly available data for this shared task, but other data should be specified in the final system description paper.</p>
+                    <p>2.&nbsp;&nbsp;We will provide two versions of the training set and three test sets. The only difference is the usage of Chinese characters, either in Traditional Chinese or Simplified Chinese. The participating teams can choose their preferred version for the task evaluation. The submitted results will be evaluated with the corresponding version of the gold standard and ranked together as the official results. </p>
+                </div>
+                <div class="part">
+                    <h2>Chinese EmoBank</h2>
+                    <p><a href="http://nlp.innobic.yzu.edu.tw/resources/ChineseEmoBank.html">http://nlp.innobic.yzu.edu.tw/resources/ChineseEmoBank.html</a></p>
+                    <p>The Chinese EmoBank (Lee et al., 2022) is a dimensional sentiment resource annotated with real-valued scores for both valence and arousal dimensions. The valence represents the degree of positive and negative sentiment, and arousal represents the degree of calm and excitement. Both dimensions range from 1 (highly negative or calm) to 9 (highly positive or excited). The Chinese EmoBank features various levels of text granularity including two lexicons called Chinese valence-arousal words (CVAW, 5,512 single words) and Chinese valence-arousal phrases (CVAP, 2,998 multi-word phrases) and two corpora called Chinese valence-arousal sentences (CVAS, 2,582 single sentences) and Chinese valence-arousal texts (CVAT, 2,969 multi-sentence texts).</p>
+                </div>
+                <h2>Training set</h2>
+                <p>We will provide one data set consisting of at least 3000 annotated sentences for model training and development. Below are samples in a JSON format that can be used for all three subtasks. </p>
+                <div class="table_div_mid">
+                    <table id='paper-table-1'>
+                        <tr>
+                            <th>
+                                <img src="./image/example.png" alt="nope" style="float: left; margin-right: 10px; max-width: 700px; max-height: 700px;">
+                                <img src="./image/sample_json.png" alt="nope" style="float: left; max-width: 700px; max-height: 500px;">
+                            </th>
+                        </tr>
+                    </table>
+                </div>
+                <h2>Test Set</h2>
+                <p>Three mutually exclusive sets are prepared for the corresponding subtasks, respectively; each includes at least 1,000 sentences that will be provided for system performance evaluation. </p>
+            </div>  
+        </div>
+    </div>
+    
+    <!-- ============================================================================ -->
+
+    <div class="keynote" id="key_note">
+        <h1>Evaluation</h1>
+        <div class="introduce_div_before">
+            <div class="introduce_div">
+                <h2>Subtask 1: Mean Absolute Error & Pearson Correlation Coefficient</h2>
+                <p>The sentiment intensity prediction performance is evaluated by examining the difference between machine-predicted ratings and human-annotated ratings using two metrics: Mean Absolute Error (MAE) and Pearson Correlation Coefficient (PCC), defined as the following Equations.</p>
+                <p><span>$$ MAE = \frac{1}{n} \sum_{i=1}^{n}|a_{i}-p_{i}| $$</span></p>
+                <p><span>$$ PCC = \frac{1}{n-1} \sum_{i=1}^{n}(\frac{a_{i}-\mu_{A}}{\sigma_{A}})(\frac{p_{i}-\mu_{P}}{\sigma_{P}}) $$</span></p>
+                <p>where \( a_{i}\in{A} \)  and \( p_{i}\in{P} \)  respectively denote the i-th actual value and predicted value, n is the number of test samples, \( \mu_{A} \)  and \( \sigma_{P} \) respectively represent the mean value and the standard deviation of A, while \( \mu_{A} \) and \( \sigma_{P} \) respectively represent the mean value and the standard deviation of P. </p>
+                <p>The actual and predicted real values should range from 1 to 9, so MAE measures the error rate in a range where the lowest value is 0 and the highest value is 8. A lower MAE indicates more accurate prediction performance. The PCC is a value between −1 and 1 that measures the linear correlation between the actual and predicted values. A lower MAE and a higher PCC indicate more accurate prediction performance. Each metric for the valence and arousal dimensions is calculated and ranked independently. A system’s overall ranking is computed based on the cumulative rank across the two metrics. The lower the cumulative rank, the better the system performance.</p>
+                <br></br>
+                <h2>Subtask 2 & 3: Precision, Recall & F1-score</h2>
+                <p>First, the valence and arousal values are rounded to an integer. Next, a triplet/quadruple is regarded as correct if and only if the three/four elements and their combination match those in the gold triplet/quadruple. On this basis, we calculate the Precision, Recall, and F1-score as the evaluation metrics, defined as the following equations. </p>
+                <p><span>$$ Precision = \frac{TP}{TP+FP} $$</span></p>
+                <p><span>$$ Recall = \frac{TP}{TP+FN}  $$</span></p>
+                <p><span>$$ F1 = \frac{2*Precision*Recall}{Precision+Recall}  $$</span></p>
+                <p>where TP, FP, and FN denote true positives, false positives, and false negatives, respectively. Precision is defined as the percentage of triplets/quadruples extracted by the system that are correct. Recall is the percentage of triplets/quadruples present in the test set found by the system. The F1-score is the harmonic mean of precision and recall. All metrics range from 0 to 1. A higher Precision, Recall, and F1 score indicate more accurate performance. A system’s overall ranking is based on the F1 score. The higher the F1 score, the better the system performance.</p>
+            </div>  
+        </div>
+   
+    </div>
+
+    <!-- ============================================================================ -->
+
+    <div class='Tutorials' id='tutor'>
+        <h1>System Description Paper</h1>
+        <div class="introduce_div_before">
+            <div class="introduce_div">
+                <p>Each participating system would submit a system description paper to describe the design and implementation of Chinese dimensional ABSA and its testing results. Please follow the ACL-2024 template to prepare the report. Non-conforming submissions would not be considered for peer review. Accepted papers that conform to the specified length and formatting requirements would be included in the SIGHAN-2024 proceeding. At least one author of each accepted system paper would be required to register to present the developed system. This is the most valuable part of participation, as authors can engage attendees in extended conversations about their work. </p>
+            </div>  
+        </div>
+    </div>
+
+
+    <!-- ============================================================================ -->
+
+    <div class="special_session" id='special'>
+        <h1>Important Dates</h1>
+        <div class="introduce_div_before">
+            <div class="introduce_div">
+                <p>(TBD will be determined when camera-ready deadline is given.)</p>
+                <div class="part">
+                    <!-- <h2>Important Dates</h2> -->
+                    <!-- <h2>V.&emsp;Important Dates</h2> -->
+                        <!-- <p>Registration:
+                            <a href="https://docs.google.com/forms/d/e/1FAIpQLSe74D0A_sWAOKH_xtz9_uF7ws9G-cdF2gYiEm5YwONQOcctrA/viewform?vc=0&c=0&w=1&flr=0" target="_blank" title="uninstructed">
+                                Click here
+                            </a>
+                        </p> -->
+                    
+                    <div class="list">
+                        <ul>
+                            <li>Release of training data: <strong>TBD</strong></li>
+                            <li>Shared task registration due: <strong>TBD</strong></li>
+                            <li>Release of test data: <strong>TBD</strong></li>
+                            <li>Testing results submission due: <strong>TBD</strong></li>
+                            <li>Release of evaluation results: <strong>TBD</strong></li>
+                            <li>System description paper due: <strong>TBD</strong></li>
+                            <li>Notification of Acceptance: <strong>TBD</strong></li>
+                            <li>Camera-ready deadline: <strong>TBD</strong></li>
+                            <li>SIGHAN 2024 Workshop: August 16, 2024</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================================================ -->
+    
+    <div class="sharetask" id="task">
+        <h1>References</h1>
+        <div class="part">
+            <!-- <h2>References</h2> -->
+            <div class="list">
+                <ul>
+                    <li>Hongjie Cai, Rui Xia, and Jianfei Yu. 2021. Aspect-Category-Opinion-Sentiment quadruple extraction with implicit aspects and opinions. In Proceedings of the 59th Annual Meeting of the Association for Computational Linguistics and the 11th International Joint Conference on Natural Language Processing, pages 340-350.</li>
+                    <li>Shaowei Chen, Yu Wang, Jie Liu and Yuelin Wang. 2021. Bidirectional machine reading comprehension for aspect sentiment triplet extraction. In Proceedings of the 35th AAAI Conference on Artificial Intelligence, pages 12666-12674.</li>
+                    <li>Tianhao Gao, Jun Fang, Hanyu Liu, Zhiyuan Liu, Chao Liu, Pengzhang Liu, Yongjun Bao and Weipeng Yan. 2022. LEGO-ABSA: A prompt-based task assemblable unified generative framework for multi-task aspect-based sentiment analysis. In Proceedings of the 29th International Conference on Computational Linguistics, pages 7002-7012.</li>
+                    <li>Lung-Hao Lee, Jian-Hong Li and Liang-Chih Yu. 2022. Chinese EmoBank: Building valence-arousal resources for dimensional sentiment analysis. ACM Transactions on Asian and Low-Resource Language Information Processing, 21(4), Article 65, 18 pages. </li>
+                    <li>Yue Mao, Yi Shen, Jingchao Yang, Xiaoying Zhu and Longjun Cai. 2022. Seq2Path: Generating sentiment tuples as paths of a tree. In Findings of the Association for Computational Linguistics: ACL 2022, pages 2215-2225.</li>
+                    <li>Yue Mao, Yi Shen, Chao Yu and Longjun Cai. 2021. A joint training dual-MRC framework for aspect based sentiment analysis. In Proceedings of the 35th AAAI Conference on Artificial Intelligence, pages 13543-13551. </li>
+                    <li>Haiyun Peng, Lu Xu, Lidong Bing, Fei Huang, Wei Lu and Luo Si. 2020. Knowing what, how, and why: a near complete solution for aspect-based sentiment analysis. In Proceedings of the 34th AAAI Conference on Artificial Intelligence, pages 8600-8607. </li>
+                    <li>Joseph J. Peper and Lu Wang. 2022. Generative aspect-based sentiment analysis with contrastive learning and expressive structure. In Findings of the Association for Computational Linguistics: EMNLP 2022, pages 6118-6124.</li>
+                    <li>Maria Pontiki, Dimitrios Galanis, Haris Papageorgiou, Ion Androutsopoulos, Suresh Manandhar, Mohammad AL-Smadi, Mahmoud AI-Ayyoub, Yanyan Zhao, Bing Qin, Orphee De Clercq, Veronique Hoste, Marianna Apidianaki, Xavier Tannier, Natalia Loukachevitch. Evgeny Kotelnikov, Nuria Bel, Salud Maria Jimenez-Zafra and Gulsen Eryigit. 2016. SemEval-2016 Task 5: Aspect Based Sentiment Analysis. In Proceedings of the 10th International Workshop on Semantic Evaluation, pages 19-30.</li>
+                    <li>Maria Pontiki, Dimitrios Galanis, Haris Papageorgiou, Suresh Manandhar and Ion Androutsopoulos. SemEval-2015 Task 12: Aspect Based Sentiment Analysis. In Proceedings of the 10th International Workshop on Semantic Evaluation, pages 486-495.</li>
+                    <li>Maria Pontiki, Dimitrios Galanis, John Pavlopoulos, Haris Papageorgiou, Ion Androutsopoulos and Suresh Manandhar. 2014. SemEval-2014 Task 4: Aspect Based Sentiment Analysis. In Proceedings of the 8th International Workshop on Semantic Evaluation, pages 27-35.</li>
+                    <li>James A Russel. 1980. A circumplex model of affect. Journal of Personality and Social Psychology, 39(6): 1161-1178.</li>
+                    <li>Zhen Wu, Chengcan Ying, Fei Zhao, Zhifang Fan, Xinyu Dai, and Rui Xia. 2020. Grid tagging scheme for end-to-end fine-grained opinion extraction. In Findings of the Association for Computational Linguistics: EMNLP 2020, pages 2576-2585. </li>
+                    <li>Lu Xu, Hao Li, Wei Lu, and Lidong Bing. 2020. Position-aware tagging for aspect sentiment triplet extraction. In Proceedings of the 2020 Conference on Empirical Methods in Natural Language Processing, pages 2339-2349. </li>
+                    <li>Chen Zhang, Qiuchi Li, Dawei Song, and Benyou Wang. 2020. A multi-task learning framework for opinion triplet extraction. In Proceedings of the Association for Computational Linguistics: EMNLP 2020, pages 819-829.</li>
+                    <li>Wenxuan Zhang, Xin Li, Yang Deng, Lidong Bing and Wai Lam. 2021. Towards generative aspect-based sentiment analysis. In Proceedings of the 59th Annual Meeting of the Association for Computational Linguistics and the 11th International Joint Conference on Natural Language Processing (Short Papers), pages 504-510.  </li>
+                    <li>Junxian Zhou, Haiqin Yang, Yuxuan He, Hao Mou. and Junbo Yang. 2023. A unified one-step solution for aspect sentiment quad predication. In Findings of the Association for Computational Linguistics: ACL 2023, pages 12249-12265.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================================================ -->
+    <div class="footer">
+        &copy;SIGHAN 2024 Shared Task || Email: dimabas2024@gmail.com || Updated: February 5, 2024
+    </div>
+    
+    <!-- 匯入main javascript -->
+    <script src="main.js"></script>
+
+</body>
+
+</html>
