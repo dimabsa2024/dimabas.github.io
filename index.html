@@ -94,7 +94,7 @@
         
         <div class="introduce_div_before">
             <div class="introduce_div">
-                <p>Aspect-Based Sentiment Analysis (ABSA) (Pontiki et al., 2014; 2015; 2016) is a critical NLP research topic that aims to identify the aspects of a given entity and analyzing the sentiment polarity associated with each aspect. In recent years, numerous research effects have been made on ABSA, which can be categorized into different tasks based on the number of sentimental elements to be extracted. For example, Aspect Sentiment Triplet Extraction (ASTE) (Chen et al., 2021; Mao et al., 2021; Peng et al., 2020; Wu et al., 2020; Xu et al., 2020; Zhang et al., 2020) task extracts three elements in a triplet, including aspect/target term, opinion term and sentiment polarity (e.g., positive, neutral, and negative). Furthermore, Aspect Sentiment Quadruple Prediction (ASQP) (Cai et al., 2021; Gao et al., 2022; Mao et al., 2022; Peper & Wang, 2022; Zhang et al., 2021; Zhou et al., 2023) task extracts the same three elements plus an additional aspect category to construct a quadruple. However, compared to representing affective states as several discrete classes (i.e., polarity), the dimensional approach that represents affective states as continuous numerical values (called intensity) in multiple dimensions such as valence-arousal (VA) space (Russel, 1980), providing more fine-grained emotional information (Lee et al., 2022). 
+                <p>Aspect-Based Sentiment Analysis (ABSA) (Pontiki et al., 2014; 2015; 2016) is a critical NLP research topic that aims to identify the aspects of a given entity and analyzing the sentiment polarity associated with each aspect. In recent years, numerous research effects have been made on ABSA, which can be categorized into different tasks based on the number of sentimental elements to be extracted. For example, Aspect Sentiment Triplet Extraction (ASTE) (Yu et al., 2023; Chen et al., 2021; Mao et al., 2021; Peng et al., 2020; Wu et al., 2020; Xu et al., 2020; Zhang et al., 2020) task extracts three elements in a triplet, including aspect/target term, opinion term and sentiment polarity (e.g., positive, neutral, and negative). Furthermore, Aspect Sentiment Quadruple Prediction (ASQP) (Cai et al., 2021; Gao et al., 2022; Mao et al., 2022; Peper & Wang, 2022; Zhang et al., 2021; Zhou et al., 2023) task extracts the same three elements plus an additional aspect category to construct a quadruple. However, compared to representing affective states as several discrete classes (i.e., polarity), the dimensional approach that represents affective states as continuous numerical values (called intensity) in multiple dimensions such as valence-arousal (VA) space (Russel, 1980), providing more fine-grained emotional information (Lee et al., 2022). 
                 </p>
                 <p>Therefore, we organize a Chinese dimensional ABSA shared task (dimABSA) in the SIGHAN 2024 workshop, providing fine-grained sentiment intensity prediction for each extracted aspect of a restaurant review. The four sentiment elements are defined as follows:</p>
             </div>
@@ -140,8 +140,8 @@
                     <p>Output: (餐點, 美味, 6.63#4.63) (上菜速度, 飛快, 7.25#6.00)</p>
                     <p></p>
                     <p>(Simplified Chinese version)</p>
-                    <p>Input: E0002:S002, 不僅餐點美味上菜速度也是飛快耶！！</p>
-                    <p>Output: (餐點, 美味, 6.63#4.63) (上菜速度, 飛快, 7.25#6.00)</p>
+                    <p>Input: E0002:S002, 不仅餐点美味上菜速度也是飞快耶!!</p>
+                    <p>Output: (餐点, 美味, 6.63#4.63) (上菜速度, 飞快, 7.25#6.00)</p>
                     <p></p>
                 </div>
                 
@@ -154,8 +154,8 @@
                     <p>Output: (拉麵, 食物#品質, 超級無敵霹靂難吃, 2.00#7.88)</p>
                     <p></p>
                     <p>(Simplified Chinese version)</p>
-                    <p>Input: E0003:S003, 這碗拉麵超級無敵霹靂難吃</p>
-                    <p>Output: (拉麵, 食物#品質, 超級無敵霹靂難吃, 2.00#7.88)</p>
+                    <p>Input: E0003:S003, 这碗拉面超级无敌霹雳难吃</p>
+                    <p>Output: (拉面, 食物#品质, 超级无敌霹雳难吃, 2.00#7.88)</p>
                 </div>
             </div>  
         </div>
@@ -187,7 +187,6 @@
                         <tr>
                             <th>
                                 <img src="./image/example.png" alt="nope" style="float: left; max-width: 700px; max-height: 1000px;">
-                                <!-- <img src="./image/sample_json.png" alt="nope" style="float: left; max-width: 700px; max-height: 500px;"> -->
                             </th>
                         </tr>
                     </table>
@@ -290,6 +289,7 @@
                     <li>James A Russel. 1980. A circumplex model of affect. Journal of Personality and Social Psychology, 39(6): 1161-1178.</li>
                     <li>Zhen Wu, Chengcan Ying, Fei Zhao, Zhifang Fan, Xinyu Dai, and Rui Xia. 2020. Grid tagging scheme for end-to-end fine-grained opinion extraction. In Findings of the Association for Computational Linguistics: EMNLP 2020, pages 2576-2585. </li>
                     <li>Lu Xu, Hao Li, Wei Lu, and Lidong Bing. 2020. Position-aware tagging for aspect sentiment triplet extraction. In Proceedings of the 2020 Conference on Empirical Methods in Natural Language Processing, pages 2339-2349. </li>
+                    <li>Li Yuan, Jin Wang, Liang-Chih Yu, Xuejie Zhang. 2023. Encoding Syntactic Information into Transformers for Aspect-Based Sentiment Triplet Extraction. IEEE Transactions on Affective Computing. DOI: 10.1109/TAFFC.2023.3291730.</li>
                     <li>Chen Zhang, Qiuchi Li, Dawei Song, and Benyou Wang. 2020. A multi-task learning framework for opinion triplet extraction. In Proceedings of the Association for Computational Linguistics: EMNLP 2020, pages 819-829.</li>
                     <li>Wenxuan Zhang, Xin Li, Yang Deng, Lidong Bing and Wai Lam. 2021. Towards generative aspect-based sentiment analysis. In Proceedings of the 59th Annual Meeting of the Association for Computational Linguistics and the 11th International Joint Conference on Natural Language Processing (Short Papers), pages 504-510.  </li>
                     <li>Junxian Zhou, Haiqin Yang, Yuxuan He, Hao Mou. and Junbo Yang. 2023. A unified one-step solution for aspect sentiment quad predication. In Findings of the Association for Computational Linguistics: ACL 2023, pages 12249-12265.</li>
