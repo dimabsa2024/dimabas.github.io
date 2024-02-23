@@ -56,6 +56,7 @@
 
 .navbar-default {
     background-color: #BD897E;
+    font-size: var(--p_size);
  }
 
 @media (max-width: 1110px) {
@@ -129,13 +130,6 @@
     width: 80%;
 }
 
-.welcome .item img{
-    width: 100%;
-    height: 100%;
-    vertical-align: bottom;
-    margin-bottom: 40px;
-}
-
 .welcome .text{
     display: flex;
     flex-direction: column;
@@ -170,6 +164,44 @@
     text-align:center;
 }
 
+.welcome .session h2{
+    text-align: center;
+    margin: auto;
+    font-size: 30px;
+    font-family: var(--content_face);
+    line-height: 40px;
+    width: 50%;
+    border-bottom: 1px solid black;
+}
+
+.welcome .session .people{
+    display: flex;
+    flex-direction:row;
+    justify-content:center;
+    flex-wrap:wrap;
+    margin: 20px auto ;
+}
+
+.welcome .session .people .author{
+    display: flex;
+    flex-direction:row;
+    justify-content:center;
+    margin:10px;
+}
+
+.welcome .session .people .author img{
+    width:90px;
+    height:110px;
+    border-radius:50%;
+}
+
+.welcome p{
+    margin: 10px;
+    font-size: var(--p_size);
+    font-family: var(--content_face);
+    line-height: var(--p_line-height);
+}
+
 @media(max-width: 768px) {
     .welcome{
         background-color: var(--bg2);
@@ -192,7 +224,7 @@
 
 /* ==================================================== */
 
-.paper{
+.introduction{
     background-color: var(--bg3);
     display: flex;
     flex-direction:column;
@@ -201,29 +233,51 @@
     margin:auto;
 }
 
-.paper h1{
-    text-align: center;
+.introduction h1{
     font-size: var(--h1_size);
     font-family: var(--title_face);
     padding: 40px 0;
     padding-bottom: 30px;
     margin: auto;
     width: auto;
+    text-align: left;
 }
 
-.paper .introduce_div_before{
+.introduction .introduce_div_before{
     display: flex;
     flex-direction:row;
     justify-content:space-around;
 }
 
-.paper .introduce_div_before .introduce_div{
-    width:var(--content_width);;
-    margin:0 10px;
-    text-align: justify;
+.introduction .contact_div_before{
+    display: flex;
+    flex-direction:row;
+    justify-content:space-around;
 }
 
-.paper .table_div_mid{
+.introduction .contact_div_before .contact_div .wechat img{
+    width:210px;
+    height:200px;
+    margin-top:40px;
+    padding-left: 20px;
+}
+
+.introduction .contact_div_before .contact_div{
+    width:var(--content_width);;
+    margin:0 10px;
+    text-align: stretch;
+    display: flex;
+    flex-direction:row;
+    justify-content:start;
+}
+
+.introduction .introduce_div_before .introduce_div{
+    width:var(--content_width);;
+    margin:0 10px;
+    text-align: stretch;
+}
+
+.introduction .table_div_mid{
     display: flex;
     flex-direction:row;
     justify-content:space-around;
@@ -232,15 +286,15 @@
     font-size: var(--p_size);
 }
 
-.paper .table_div_mid li{
+.introduction .table_div_mid li{
     margin: 20px auto;
 }
 
-.paper .table_div_mid table{
+.introduction .table_div_mid table{
     width: auto;
 }
 
-.paper .table_div_mid th {
+.introduction .table_div_mid th {
     text-align: center;
     border: 3px solid black;
     font-size: var(--p_size);
@@ -248,13 +302,13 @@
     line-height: var(--p_line-height);
 }
 
-.paper .table_div_mid tr{
+.introduction .table_div_mid tr{
     border: 3px solid black;
     padding-top: 0;
     padding-right: 5px;
 }
 
-.paper .table_div_mid td{
+.introduction .table_div_mid td{
     border: 3px solid black;
     padding-right: 5px;
     line-height: 24px;
@@ -265,20 +319,20 @@
     vertical-align:text-top;
 }
 
-.paper .introduce_div_after{
+.introduction .introduce_div_after{
     display: flex;
     flex-direction:row;
     justify-content:space-around;
     margin-bottom: 40px;
 }
 
-.paper .introduce_div_after .introduce_div{
+.introduction .introduce_div_after .introduce_div{
     width:var(--content_width);;
     margin:10px;
     text-align: justify;
 }
 
-.paper h2{
+.introduction h2{
     text-align: left;
     font-family: var(--title_face);
     font-size: var(--h2_size);
@@ -287,7 +341,7 @@
     margin-bottom: 20px;
 }
 
-.paper p{
+.introduction p{
     margin: 10px;
     font-size: var(--p_size);
     font-family: var(--content_face);
@@ -295,27 +349,27 @@
 }
 
 @media(min-width: 1050px) {
-    #paper-table-1{
+    #introduction-table-1{
         display: block;
     }
-    #paper-table-2{
+    #introduction-table-2{
         display: none;
     }
 
 }
 
 @media(max-width: 1050px) {
-    #paper-table-1{
+    #introduction-table-1{
         display: none;
     }
-    #paper-table-2{
+    #introduction-table-2{
         display: block;
     }
 
 }
 
 @media(max-width: 768px) {
-    .paper{
+    .introduction{
         background-color: var(--bg3);
         display: flex;
         flex-direction:column;
@@ -324,16 +378,16 @@
         margin:auto;
     }
 
-    .paper .introduce_div_before .introduce_div{
+    .introduction .introduce_div_before .introduce_div{
         width:100%;
         margin:10px;
     }
 
-    .paper .table_div_mid table{
+    .introduction .table_div_mid table{
         width: 100%;
     }
 
-    .paper .introduce_div_after .introduce_div{
+    .introduction .introduce_div_after .introduce_div{
         width:100%;
         margin:10px;
     }
@@ -341,21 +395,21 @@
 /* ==================================================== */
 
 
-.programs{
+.task{
     background-color: var(--bg3);
     width: var(--large_width);
     margin:auto;
 }
 
-.programs h1{
-    text-align: center;
+.task h1{
+    text-align: left;
     font-size: var(--h1_size);
     font-family: var(--title_face);
     padding: 40px 0;
     margin: auto;
     width: auto;
 }
-.programs h2{
+.task h2{
     text-align: left;
     font-family: var(--title_face);
     font-size: var(--h2_size);
@@ -364,21 +418,21 @@
     margin: 10px;
 }
 
-.programs h3{
+.task h3{
     text-align: left;
     font-family: var(--title_face);
     font-weight:bold;
     width: auto;
 }
 
-.programs p{
+.task p{
     margin: 10px;
     font-size: var(--p_size);
     font-family: var(--content_face);
     line-height: var(--p_line-height);
 }
 
-.programs .part{
+.task .part{
     display: flex;
     flex-direction:column;
     justify-content:center;
@@ -386,26 +440,26 @@
     margin: 20px;
 }
 
-.programs .introduce_div_before{
+.task .introduce_div_before{
     display: flex;
     flex-direction:row;
     justify-content:space-around;
 }
 
-.programs .introduce_div_before .introduce_div{
+.task .introduce_div_before .introduce_div{
     width:var(--content_width);;
     margin:0 10px;
     text-align: justify;
 }
 
-.programs .introduce_div_before .introduce_div .part p{
+.task .introduce_div_before .introduce_div .part p{
     margin: 10px;
     font-size: var(--p_size);
     font-family: var(--content_face);
     line-height: var(--p_line-height);
 }
 
-.programs .table_div_mid{
+.task .table_div_mid{
     display: flex;
     flex-direction:row;
     justify-content:space-around;
@@ -414,24 +468,24 @@
     font-size: var(--p_size);
 }
 
-.programs .table_div_mid li{
+.task .table_div_mid li{
     margin: 20px auto;
 }
 
-.programs table{
+.task table{
     background-color: #fff;
     border:3px #cccccc solid;
     width: 100%;
 }
 
-.programs th,.programs td{
+.task th,.task td{
     border:1px #cccccc solid;
     text-align : center;
     font-size: var(--p_size);
     font-family: var(--content_face);
 }
 
-.programs .part h2{
+.task .part h2{
     text-align: left;
     font-family: var(--title_face);
     font-size: var(--h2_size);
@@ -440,7 +494,7 @@
     margin-bottom: 20px;
 }
 
-.programs .part h3{
+.task .part h3{
     text-align: left;
     font-family: var(--title_face);
     font-weight:bold;
@@ -448,7 +502,7 @@
     margin: 10px;
 }
 
-.programs .part #session-top{
+.task .part #session-top{
     text-align: center;
     font-family: var(--title_face);
     font-size: var(--h2_size);
@@ -459,7 +513,7 @@
     border-top: 1px solid black;
 }
 
-.programs .part h4{
+.task .part h4{
     text-align: left;
     font-family: var(--title_face);
     font-size: var(--h2_size);
@@ -468,7 +522,7 @@
     margin-bottom: 5px;
 }
 
-.programs .part p{
+.task .part p{
     text-align: left;
     margin: auto;
     font-size: var(--p_size);
@@ -477,12 +531,12 @@
     line-height: var(--p_line-height);
 }
 
-.programs .part .session-item{
+.task .part .session-item{
     margin-bottom: 20px;
 }
 
 @media(max-width: 768px) {
-    .programs{
+    .task{
         background-color: var(--bg3);
         display: flex;
         flex-direction:column;
@@ -491,16 +545,16 @@
         margin:auto;
     }
 
-    .programs .introduce_div_before .introduce_div{
+    .task .introduce_div_before .introduce_div{
         width:100%;
         margin:10px;
     }
 
-    .programs .table_div_mid table{
+    .task .table_div_mid table{
         width: 100%;
     }
 
-    .programs .introduce_div_after .introduce_div{
+    .task .introduce_div_after .introduce_div{
         width:100%;
         margin:10px;
     }
@@ -516,7 +570,7 @@
 }
 
 .registration h1{
-    text-align: center;
+    text-align: left;
     font-size: var(--h1_size);
     font-family: var(--title_face);
     padding: 40px 0;
@@ -692,7 +746,7 @@
 }
 
 .keynote h1{
-    text-align: center;
+    text-align: left;
     font-size: var(--h1_size);
     font-family: var(--title_face);
     padding: 40px 0;
@@ -869,7 +923,7 @@
 }
 
 .Tutorials h1{
-    text-align: center;
+    text-align: left;
     font-size: var(--h1_size);
     font-family: var(--title_face);
     padding: 40px 0;
@@ -912,8 +966,27 @@
     justify-content:center;
     width: var(--content_width);
     margin: auto;
-    padding-bottom: 40px;
+    padding-bottom: 20px;
 }
+
+.Tutorials .introduce_div_before .introduce_div .part p{
+    text-align: justify;
+    margin: auto;
+    font-size: var(--p_size);
+    font-family: var(--content_face);
+    width: 100%;
+    line-height: var(--p_line-height);
+}
+
+.Tutorials .part h3{
+    text-align: left;
+    font-family: var(--title_face);
+    font-size: 20px;
+    font-weight:bold;
+    width: auto;
+    text-decoration: underline;
+}
+
 
 .Tutorials table{
     /* background-color: #fff; */
@@ -942,16 +1015,6 @@
     border-top: 1px solid black;
 }
 
-.Tutorials .part h3{
-    text-align: center;
-    font-family: var(--title_face);
-    font-size: var(--h2_size);
-    /* font-weight:bold; */
-    font-weight:normal;
-    width: auto;
-    margin:auto;
-    margin-bottom: 20px;
-}
 
 .Tutorials .part h4{
     text-align: center;
@@ -963,6 +1026,7 @@
     margin-top: 40px;
     margin-bottom: 20px;
 }
+
 
 .Tutorials .part .list{
     padding-left: 40px;
@@ -984,15 +1048,6 @@
     font-family: var(--content_face);
 }
 
-.Tutorials .part p{
-    text-align: justify;
-    margin: auto;
-    margin-bottom:20px;
-    font-size: var(--p_size);
-    font-family: var(--content_face);
-    width: 100%;
-    line-height: var(--p_line-height);
-}
 
 .Tutorials .part .AI3{
     margin-top: 20px;
@@ -1039,7 +1094,7 @@
 }
 
 .special_session h1{
-    text-align: center;
+    text-align: left;
     font-size: var(--h1_size);
     font-family: var(--title_face);
     padding: 40px 0;
@@ -1238,13 +1293,13 @@
 }
 
 @media(min-width: 1050px) {
-    #paper-table-1{
+    #introduction-table-1{
         display: block;
     }
 }
 
 @media(max-width: 1050px) {
-    #paper-table-1{
+    #introduction-table-1{
         display: none;
     }
 
@@ -1284,7 +1339,7 @@
 }
 
 .sharetask h1{
-    text-align: center;
+    text-align: left;
     font-size: var(--h1_size);
     font-family: var(--title_face);
     padding: 40px 0 ;
@@ -1361,6 +1416,14 @@
     padding-bottom: 40px;
 }
 
+.sharetask .part h1{
+    text-align: left;
+    font-size: var(--h1_size);
+    font-family: var(--title_face);
+    width: 100%;
+    /* margin-bottom: 20px; */
+}
+
 .sharetask .part h2{
     text-align: left;
     font-family: var(--title_face);
@@ -1384,6 +1447,7 @@
     margin-top: 20px;
     text-align: center;
 }
+
 
 .sharetask .part img{
     width:50%;
@@ -1518,7 +1582,7 @@
 }
 
 .organization h1{
-    text-align: center;
+    text-align: left;
     font-size: var(--h1_size);
     font-family: var(--title_face);
     padding: 40px 0;
