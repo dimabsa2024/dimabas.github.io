@@ -180,24 +180,24 @@
         <div class="introduce_div_before">
             <div class="introduce_div">
                 <h1>Task Description</h1>
-                <p>This task aims to evaluate the capability of an automatic system for Chinese dimensional ABSA. This task can be further divided into three subtasks described as follows. 
+                <p>This task aims to evaluate the capability of an automatic system for Chinese dimensional ABSA. This task can be further divided into three subtasks described as follows.
                 </p>
                 <h2>Subtask 1: Intensity Prediction</h2>
-                <p>The first subtask focuses on predicting sentiment intensities in the valence-arousal dimensions. Given a sentence and a specific aspect, the system should predict the valence-arousal ratings. The input format consists of ID, sentence, and aspect. The output is two real-valued scores rounded to two decimal places and separated by a hashtag, each denotes the valence and arousal rating, respectively.</p>
+                <p>The first subtask focuses on predicting sentiment intensities in the valence-arousal dimensions. Given a sentence and a specific aspect, the system should predict the valence-arousal ratings. The input format consists of ID, sentence, and aspect. The output format consists of the ID and valence-arousal predicted values that are separated with a 'space'. The intensity prediction is two real-valued scores rounded to two decimal places and separated by a hashtag, each denotes the valence and arousal rating, respectively.</p>
                 <div class="part">
                     <h3>Example 1</h3>
                     <p>(Traditional Chinese version)</p>
-                    <p>Input: E0001:S001, 這個湯頭濃重了一些, 湯頭</p>
+                    <p>Input: E0001:S001, 這個湯頭濃重了一些</p>
                     <p>Output: E0001:S001 (湯頭,4.50#3.25)</p>
                     <p></p>
                     <p>(Simplified Chinese version)</p>
-                    <p>Input: E0001:S001, 这个汤头浓重了一些, 汤头</p>
+                    <p>Input: E0001:S001, 这个汤头浓重了一些</p>
                     <p>Output: E0001:S001 (汤头,4.50#3.25)</p>
                     <p></p>
                 </div>
                 
                 <h2>Subtask 2: Triplet Extraction</h2>
-                <p>The second subtask aims to extract sentiment triplets composed of three elements. Given a sentence only, the system should extract at least one sentiment triplet (aspect, opinion, intensity). </p>
+                <p>The second subtask aims to extract sentiment triplets composed of three elements. Given a sentence only, the system should extract at least one sentiment triplet (aspect, opinion, intensity). The output format consists of the ID and sentiment triplet that are separated with a 'space'.</p>
                 <div class="part">
                     <h3>Example 2</h3>
                     <p>(Traditional Chinese version)</p>
@@ -211,7 +211,7 @@
                 </div>
                 
                 <h2>Subtask 3: Quadruple Extraction</h2>
-                <p>The third subtask aims to extract sentiment quadruples composed of four elements. Given a sentence only, the system should extract at least one sentiment quadruple (aspect, category, opinion, intensity). </p>
+                <p>The third subtask aims to extract sentiment quadruples composed of four elements. Given a sentence only, the system should extract at least one sentiment quadruple (aspect, category, opinion, intensity). The output format consists of the ID and sentiment quadruple that are separated with a 'space'.</p>
                 <div class="part">
                     <h3>Example 3</h3>
                     <p>(Traditional Chinese version)</p>
