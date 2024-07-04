@@ -135,7 +135,7 @@
     <div class="introduction" id="intro">
 
         
-        <div class="contact_div_before">
+<!--         <div class="contact_div_before">
             <div class="contact_div">
                 
                 <div class="contact_p">
@@ -145,12 +145,12 @@
                 
                 </div>
                 <div class="wechat">
-                    <!-- <p>If you have any questions, </p> -->
+                    <<p>If you have any questions, </p> 
                     <img src ="image/wechat.jpg">
                 </div>
             </div>
             
-        </div>
+        </div> -->
 
         
         <div class="introduce_div_before">
@@ -163,7 +163,7 @@
         <div class="introduce_div_before">
             <div class="introduce_div">
                 <h1>Introduction</h1>
-                <p>Aspect-Based Sentiment Analysis (ABSA) (Pontiki et al., 2014; 2015; 2016) is a critical NLP research topic that aims to identify the aspects of a given entity and analyzing the sentiment polarity associated with each aspect. In recent years, numerous research effects have been made on ABSA, which can be categorized into different tasks based on the number of sentimental elements to be extracted. For example, Aspect Sentiment Triplet Extraction (ASTE) (Yu et al., 2023; Chen et al., 2021; Mao et al., 2021; Peng et al., 2020; Wu et al., 2020; Xu et al., 2020; Zhang et al., 2020) task extracts three elements in a triplet, including aspect/target term, opinion term and sentiment polarity (e.g., positive, neutral, and negative). Furthermore, Aspect Sentiment Quadruple Prediction (ASQP) (Cai et al., 2021; Gao et al., 2022; Mao et al., 2022; Peper & Wang, 2022; Zhang et al., 2021; Zhou et al., 2023) task extracts the same three elements plus an additional aspect category to construct a quadruple. However, compared to representing affective states as several discrete classes (i.e., polarity), the dimensional approach that represents affective states as continuous numerical values (called intensity) in multiple dimensions such as valence-arousal (VA) space (Russel, 1980), providing more fine-grained emotional information (Lee et al., 2022). </p>
+                <p>Aspect-Based Sentiment Analysis (ABSA) (Pontiki et al., 2014; 2015; 2016) is a critical NLP research topic that aims to identify the aspects of a given entity and analyzing the sentiment polarity associated with each aspect. In recent years, numerous research effects have been made on ABSA, which can be categorized into different tasks based on the number of sentimental elements to be extracted. For example, Aspect Sentiment Triplet Extraction (ASTE) (Yuan et al., 2023; Chen et al., 2021; Mao et al., 2021; Peng et al., 2020; Wu et al., 2020; Xu et al., 2020; Zhang et al., 2020) task extracts three elements in a triplet, including aspect/target term, opinion term and sentiment polarity (e.g., positive, neutral, and negative). Furthermore, Aspect Sentiment Quadruple Prediction (ASQP) (Cai et al., 2021; Gao et al., 2022; Mao et al., 2022; Peper & Wang, 2022; Zhang et al., 2021; Zhou et al., 2023) task extracts the same three elements plus an additional aspect category to construct a quadruple. However, compared to representing affective states as several discrete classes (i.e., polarity), the dimensional approach that represents affective states as continuous numerical values (called intensity) in multiple dimensions such as valence-arousal (VA) space (Russel, 1980), providing more fine-grained emotional information (Lee et al., 2022). </p>
                 <p>Therefore, we organize a Chinese dimensional ABSA shared task (dimABSA) in the SIGHAN 2024 workshop, providing fine-grained sentiment intensity prediction for each extracted aspect of a restaurant review. The four sentiment elements are defined as follows:</p>
             </div>
         </div>
@@ -287,7 +287,7 @@
                 <p><span>$$ Precision = \frac{TP}{TP+FP} $$</span></p>
                 <p><span>$$ Recall = \frac{TP}{TP+FN}  $$</span></p>
                 <p><span>$$ F1 = \frac{2*Precision*Recall}{Precision+Recall}  $$</span></p>
-                <p>where TP, FP, and FN denote true positives, false positives, and false negatives, respectively. Precision is defined as the percentage of triplets/quadruples extracted by the system that are correct. Recall is the percentage of triplets/quadruples present in the test set found by the system. The F1-score is the harmonic mean of precision and recall. All metrics range from 0 to 1. A higher Precision, Recall, and F1 score indicate more accurate performance. A system’s overall ranking is based on the F1 score. The higher the F1 score, the better the system performance.</p>
+                <p>where TP, FP, and FN denote true positives, false positives, and false negatives, respectively.</p>
                 <p>Each metric for the valence and arousal dimensions is calculated and ranked either independently or in combination. Precision is defined as the percentage of triplets/quadruples extracted by the system that are correct. Recall is the percentage of triplets/quadruples present in the test set found by the system. The F1-score is the harmonic mean of precision and recall. All metrics range from 0 to 1. A higher Precision, Recall, and F1 score indicate more accurate performance.</p>
             </div>  
         </div>
